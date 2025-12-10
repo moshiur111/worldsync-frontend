@@ -75,7 +75,7 @@ const ClockForm = ({
           <select
             name="offset"
             id="offset"
-            value={formValuse.offset}
+            value={formValuse.offset / 60}
             onChange={handleChange}
           >
             {getOffset().map((offset) => (
