@@ -21,6 +21,8 @@ const useTimer = (date) => {
       clearInterval(timerId);
     };
   }, [timer]);
+
+  return timer;
 };
 
 export default useTimer;
