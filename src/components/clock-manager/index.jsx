@@ -22,8 +22,11 @@ const ClockManger = () => {
   };
 
   const createClock = (clock) => {
-    clock.id = uuidv4();
-    setClocks([...clocks, clock]);
+    const newClock = {
+      ...clock,
+      id: uuidv4(),
+    };
+    setClocks((prev) => [...prev, newClock]);
   };
 
   const updateClock = (updatedClock) => {
@@ -48,7 +51,13 @@ const ClockManger = () => {
         updateClock={updateLocalClock}
         createClock={createClock}
       />
-      <ClockList />
+
+      <ClockList
+        clocks={clocks}
+        localClock={localClock.date}
+        updateClock={updateClock}
+        deleteClock={deleteClock}
+      />
     </div>
   );
 };
