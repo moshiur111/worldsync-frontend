@@ -1,8 +1,8 @@
 import { format } from "date-fns";
 
 const ClockDisplay = ({ date, title, timezone, offset }) => {
-  let offsetHour = offset / 60;
-
+  const offsetHour = offset / 60;
+  
   return (
     <div>
       <h1>Title: {title}</h1>

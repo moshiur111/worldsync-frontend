@@ -4,7 +4,7 @@ import { TIMEZONE_OFFSET } from "../constants/timezone";
 
 const useClock = (timezone, offset) => {
   const [localDate, setLocalDate] = useState(null);
-  const [localTimezone, setLocalTimezone] = useState(null);
+  const [localTimezone, setLocalTimezone] = useState("");
   const [localOffset, setLocalOffset] = useState(0);
   const [utc, setUtc] = useState(null);
 
